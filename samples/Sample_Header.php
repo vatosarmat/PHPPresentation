@@ -12,6 +12,7 @@ use PhpOffice\PhpPresentation\Shape\Group;
 use PhpOffice\PhpPresentation\Shape\RichText;
 use PhpOffice\PhpPresentation\Shape\RichText\BreakElement;
 use PhpOffice\PhpPresentation\Shape\RichText\TextElement;
+use PhpOffice\PhpPresentation\Shape\Table;
 use PhpOffice\PhpPresentation\Slide;
 use PhpOffice\PhpPresentation\Style\Alignment;
 use PhpOffice\PhpPresentation\Style\Bullet;
@@ -277,8 +278,10 @@ class PhpPptTree
             $this->append('<li><span class="shape" id="div' . $shape->getHashCode() . '">Shape "Drawing\Zip"</span></li>');
         } elseif ($shape instanceof RichText) {
             $this->append('<li><span class="shape" id="div' . $shape->getHashCode() . '">Shape "RichText"</span></li>');
+        } elseif ($shape instanceof Table){
+            $this->append('<li><span class="shape" id="div' . $shape->getHashCode() . '">Shape "Table"</span></li>');
         } else {
-            var_dump($shape);
+            $this->append('<li><span class="shape" id="div' . $shape->getHashCode() . '">Shape "'.get_class($shape).'"</span></li>');
         }
     }
 
