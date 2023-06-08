@@ -123,7 +123,7 @@ abstract class AbstractGraphic extends AbstractShape implements ComparableInterf
      *
      * @return $this
      */
-    public function setName($pValue = '')
+    public function setName($pValue = ''):self
     {
         $this->name = $pValue;
 
@@ -147,7 +147,7 @@ abstract class AbstractGraphic extends AbstractShape implements ComparableInterf
      *
      * @return $this
      */
-    public function setDescription($pValue = '')
+    public function setDescription($pValue = ''):self
     {
         $this->description = $pValue;
 
@@ -159,7 +159,7 @@ abstract class AbstractGraphic extends AbstractShape implements ComparableInterf
      *
      * @return self
      */
-    public function setWidth(int $pValue = 0)
+    public function setWidth(int $pValue = 0):self
     {
         // Resize proportional?
         if ($this->resizeProportional && 0 != $pValue && 0 != $this->width) {
@@ -178,7 +178,7 @@ abstract class AbstractGraphic extends AbstractShape implements ComparableInterf
      *
      * @return self
      */
-    public function setHeight(int $pValue = 0)
+    public function setHeight(int $pValue = 0):self
     {
         // Resize proportional?
         if ($this->resizeProportional && 0 != $pValue && 0 != $this->height) {
@@ -199,7 +199,7 @@ abstract class AbstractGraphic extends AbstractShape implements ComparableInterf
      *
      * @return self
      */
-    public function setWidthAndHeight(int $width = 0, int $height = 0)
+    public function setWidthAndHeight(int $width = 0, int $height = 0):self
     {
         $xratio = $width / $this->width;
         $yratio = $height / $this->height;
