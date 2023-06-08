@@ -151,7 +151,7 @@ abstract class AbstractShape implements ComparableInterface
      *
      * @return $this
      */
-    public function setContainer(ShapeContainerInterface $pValue = null, $pOverrideOld = false)
+    public function setContainer(ShapeContainerInterface $pValue = null, $pOverrideOld = false):self
     {
         if (is_null($this->container)) {
             // Add drawing to ShapeContainerInterface
@@ -196,7 +196,7 @@ abstract class AbstractShape implements ComparableInterface
      *
      * @return $this
      */
-    public function setOffsetX(int $pValue = 0)
+    public function setOffsetX(int $pValue = 0):self
     {
         $this->offsetX = $pValue;
 
@@ -218,7 +218,7 @@ abstract class AbstractShape implements ComparableInterface
      *
      * @return $this
      */
-    public function setOffsetY(int $pValue = 0)
+    public function setOffsetY(int $pValue = 0):self
     {
         $this->offsetY = $pValue;
 
@@ -240,7 +240,7 @@ abstract class AbstractShape implements ComparableInterface
      *
      * @return $this
      */
-    public function setWidth(int $pValue = 0)
+    public function setWidth(int $pValue = 0):self
     {
         $this->width = $pValue;
 
@@ -262,7 +262,7 @@ abstract class AbstractShape implements ComparableInterface
      *
      * @return $this
      */
-    public function setHeight(int $pValue = 0)
+    public function setHeight(int $pValue = 0):self
     {
         $this->height = $pValue;
 
@@ -274,7 +274,7 @@ abstract class AbstractShape implements ComparableInterface
      *
      * @return self
      */
-    public function setWidthAndHeight(int $width = 0, int $height = 0)
+    public function setWidthAndHeight(int $width = 0, int $height = 0):self
     {
         $this->width = $width;
         $this->height = $height;
@@ -299,7 +299,7 @@ abstract class AbstractShape implements ComparableInterface
      *
      * @return $this
      */
-    public function setRotation($pValue = 0)
+    public function setRotation($pValue = 0):self
     {
         $this->rotation = $pValue;
 
@@ -331,7 +331,7 @@ abstract class AbstractShape implements ComparableInterface
     /**
      * @return $this
      */
-    public function setShadow(Shadow $pValue = null)
+    public function setShadow(Shadow $pValue = null):self
     {
         $this->shadow = $pValue;
 
@@ -403,7 +403,7 @@ abstract class AbstractShape implements ComparableInterface
      *
      * @return $this
      */
-    public function setHashIndex(int $value)
+    public function setHashIndex(int $value):self
     {
         $this->hashIndex = $value;
 
